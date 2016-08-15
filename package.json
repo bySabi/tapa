@@ -1,7 +1,7 @@
 {
   "name": "tapa",
-  "version": "0.1.0",
-  "description": "Add helpers to TAP test modules",
+  "version": "0.1.1",
+  "description": "Add helpers to TAP Frameworks",
   "main": "index.js",
   "scripts": {
     "lint": "eslint . --ext .js",
