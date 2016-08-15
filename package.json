@@ -1,10 +1,12 @@
 {
   "name": "tapa",
-  "version": "0.0.1",
-  "description": "WIP project",
+  "version": "0.1.0",
+  "description": "Add helpers to TAP test modules",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint . --ext .js",
+    "testonly": "tap test/*.js",
+    "test": "npm run lint && npm run testonly"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,21 @@
   "bugs": {
     "url": "https://github.com/bySabi/tapa/issues"
   },
-  "homepage": "https://github.com/bySabi/tapa#readme"
+  "homepage": "https://github.com/bySabi/tapa#readme",
+  "keywords": [
+    "tape",
+    "tap",
+    "tapa",
+    "test",
+    "subtest",
+    "nest",
+    "nested",
+    "helper"
+  ],
+  "devDependencies": {
+    "eslint": "3.x.x",
+    "eslint-modules-standard-deviation--es5": "1.x.x",
+    "tap": "6.x.x",
+    "tape": "4.x.x"
+  }
 }
