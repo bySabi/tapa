@@ -1,6 +1,7 @@
 # tapa (add TAP helpers)
 
 [![npm version](https://badge.fury.io/js/tapa.svg)](https://badge.fury.io/js/tapa)
+[![npm downloads](https://img.shields.io/npm/dm/tapa.svg?style=flat-square)](https://www.npmjs.com/package/tapa)
 
 > Add helpers to your favorite javascript TAP framework.
 
