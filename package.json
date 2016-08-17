@@ -30,6 +30,7 @@
   ],
   "devDependencies": {
     "eslint": "3.x.x",
+    "eslint-config-standard-deviation--es5": "1.x.x",
     "eslint-modules-standard-deviation--es5": "1.x.x",
     "tap": "6.x.x",
     "tape": "4.x.x"
