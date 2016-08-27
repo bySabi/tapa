@@ -6,7 +6,7 @@
 
 > Add helpers to your favorite javascript TAP framework.
 
-[Tapas][tapas] is a wide variety of :es: Spanish food [appetizers][appetizers]. Now you can add any `tapa` to your TAP `menu` :fork_and_knife:
+[Tapa][tapas] is a wide variety of :es: Spanish food [appetizers][appetizers]. Now you can add any `tapa` to your TAP `menu` :fork_and_knife:
 
 [tapas]: https://en.wikipedia.org/wiki/Tapas
 [appetizers]: https://www.google.com/search?q=tapas+spain&source=lnms&tbm=isch
@@ -29,7 +29,7 @@ var addTapa = require('tapa');
 var tape = require('tape');
 
 // add a new assertion: biggerThan
-var test = addTapa(tap, {
+var test = addTapa(tape, {
   biggerThan (a, b) {
     this.ok(b > a, 'is bigger than ' + a);
   }
