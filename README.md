@@ -3,7 +3,9 @@
 [![npm version](https://badge.fury.io/js/tapa.svg)](https://badge.fury.io/js/tapa)
 [![npm downloads](https://img.shields.io/npm/dm/tapa.svg?style=flat-square)](https://www.npmjs.com/package/tapa)
 [![Build Status](https://travis-ci.org/bySabi/tapa.svg?branch=master)](https://travis-ci.org/bySabi/tapa)
-[![Known Vulnerabilities](https://snyk.io/test/github/bysabi/tapa/badge.svg)](https://snyk.io/test/github/bysabi/tapa)
+[![Windows Tests](https://img.shields.io/appveyor/ci/bySabi/tapa/master.svg?label=Windows%20Tests)](https://ci.appveyor.com/project/bySabi/tapa)
+[![bitHound Overall Score](https://www.bithound.io/github/bySabi/tapa/badges/score.svg)](https://www.bithound.io/github/bySabi/tapa)
+[![Donate](https://img.shields.io/badge/$-support-green.svg?style=flat-square)](https://paypal.me/bySabi/10)
 
 > Add helpers to your favorite javascript TAP framework.
 
