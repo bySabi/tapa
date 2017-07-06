@@ -1,9 +1,11 @@
+'use strict';
+
 var tap = require('tape');
 var addTapa = require('../');
 
 // add a new assertion: biggerThan
 var test = addTapa(tap, {
-  biggerThan (a, b) {
+  biggerThan: function (a, b) {
     this.ok(b > a, 'is bigger than ' + a);
   }
 });

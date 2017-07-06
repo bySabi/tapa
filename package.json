@@ -1,10 +1,10 @@
 {
   "name": "tapa",
-  "version": "0.1.4",
+  "version": "1.0.0",
   "description": "Add helpers to TAP Frameworks",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint . --ext .js",
+    "lint": "semistandard --fix --verbose | snazzy",
     "testonly": "tap test/*.js",
     "test": "npm run lint && npm run testonly"
   },
@@ -29,10 +29,9 @@
     "helper"
   ],
   "devDependencies": {
-    "eslint": "3.x.x",
-    "eslint-config-standard-deviation--es5": "1.x.x",
-    "eslint-modules-standard-deviation--es5": "1.x.x",
-    "tap": "6.x.x",
+    "semistandard": "*",
+    "snazzy": "*",
+    "tap": "10.x.x",
     "tape": "4.x.x"
   }
 }

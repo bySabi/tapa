@@ -26,9 +26,6 @@ npm install tapa --save-dev
 
 ```javascript
 var addTapa = require('tapa');
-```
-
-```javascript
 var tape = require('tape');
 
 // add a new assertion: biggerThan

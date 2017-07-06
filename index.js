@@ -1,8 +1,12 @@
+'use strict';
+
 // 'node-tap' export is a object
 // 'tape' export is a function with methods
 function addTapa (tap, tapa) {
   tap.test = testWrapped(tap.test, tapa);
-  if (typeof tap === 'function') {  // tape only
+  tap.only = testWrapped(tap.only, tapa);
+  if (typeof tap === 'function') {
+    // tape only
     var tapObj = copyProps({}, tap);
     tap = testWrapped(tap, tapa);
     return copyProps(tap, tapObj);
@@ -10,12 +14,11 @@ function addTapa (tap, tapa) {
   return inject(tap, tapa);
 }
 
-// Wrap test method and test method callback.
-// Wrapped callback inject `tapas` recursively
-// when a nested test is create.
-function testWrapped(test, tapa) {
-  function recursiveCallBack(cb) {
-    return function(t) {
+// Wrap 'test' method and test method callback. Wrapped callback
+// inject `tapas` recursively when a nested test is create.
+function testWrapped (test, tapa) {
+  function recursiveCallBack (cb) {
+    return function (t) {
       t = inject(t, tapa);
       var test = t.test;
       t.test = function (name_, opts_, cb_) {
@@ -25,9 +28,9 @@ function testWrapped(test, tapa) {
         var cb = args.cb;
 
         return test.call(t, name, opts, recursiveCallBack(cb));
-      }
+      };
       return cb.call(t, t);
-    }
+    };
   }
 
   return function (name_, opts_, cb_) {
@@ -37,10 +40,10 @@ function testWrapped(test, tapa) {
     var cb = args.cb;
 
     return test.call(test, name, opts, recursiveCallBack(cb));
-  }
+  };
 }
 
-function inject(ctx, tapa) {
+function inject (ctx, tapa) {
   for (var method in tapa) {
     ctx[method] = tapa[method].bind(ctx);
   }
@@ -54,7 +57,6 @@ function getTestArgs (name_, opts_, cb_) {
   var name = '(anonymous)';
   var opts = {};
   var cb;
-
   for (var i = 0; i < arguments.length; i++) {
     var arg = arguments[i];
     var t = typeof arg;
@@ -67,10 +69,10 @@ function getTestArgs (name_, opts_, cb_) {
     }
   }
   return { name: name, opts: opts, cb: cb };
-};
+}
 
-// Don´t relay on Object assign's paraphernalia
-function copyProps(dest, src) {
+// Don´t relay on Object assign
+function copyProps (dest, src) {
   for (var prop in src) {
     if (src.hasOwnProperty(prop)) {
       dest[prop] = src[prop];
