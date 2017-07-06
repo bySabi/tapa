@@ -17,9 +17,9 @@ test.only('a set of some tests', function (t) {
   });
 });
 
-test('this should not run', function(f) {
+test('this should not run', function(t) {
   t.test('this fail', function (t) {
     t.fail()
     t.end();
   });
-})
+});
